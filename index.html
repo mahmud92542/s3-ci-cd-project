@@ -6,50 +6,72 @@
     <title>Gourmet Bites | Fine Dining</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        :root { --gold: #c5a059; --dark: #1a1a1a; --light: #f4f4f4; }
-        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--dark); color: white; }
+        :root { --gold: #c5a059; --dark: #121212; --text: #e0e0e0; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--dark); color: var(--text); }
 
         /* Hero */
         .hero { 
-            height: 80vh; 
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
-                        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2000');
+            height: 90vh; 
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?q=80&w=2000');
             background-size: cover; background-position: center;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
-            text-align: center;
+            text-align: center; padding: 0 20px;
         }
-        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin: 0; color: var(--gold); }
+        h1 { font-family: 'Playfair Display', serif; font-size: 5rem; margin: 0; color: var(--gold); }
+        .hero p { font-size: 1.5rem; letter-spacing: 2px; }
+
+        /* Section Styling */
+        section { padding: 5rem 2rem; max-width: 1100px; margin: auto; }
+        h2 { font-family: 'Playfair Display', serif; text-align: center; color: var(--gold); font-size: 3rem; margin-bottom: 3rem; }
 
         /* Menu Grid */
-        .menu { padding: 4rem 2rem; max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
-        .dish { background: #252525; border-radius: 15px; overflow: hidden; transition: 0.3s; }
-        .dish:hover { transform: scale(1.03); }
-        .dish img { width: 100%; height: 250px; object-fit: cover; }
+        .menu-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .dish { background: #1a1a1a; border-radius: 15px; overflow: hidden; transition: 0.4s; }
+        .dish:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
+        .dish img { width: 100%; height: 220px; object-fit: cover; }
         .info { padding: 1.5rem; }
         .price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
+
+        /* Footer / Contact */
+        footer { text-align: center; padding: 3rem; border-top: 1px solid #333; }
     </style>
 </head>
 <body>
 
     <div class="hero">
         <h1>Gourmet Bites</h1>
-        <p>Experience the art of fine dining.</p>
+        <p>ARTISAN CUISINE & FINE WINES</p>
     </div>
 
-    <div class="menu">
-        <div class="dish">
-            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800" alt="Salad">
-            <div class="info"><h3>Garden Fresh Salad</h3><p class="price">$14.00</p></div>
+    <section id="menu">
+        <h2>Our Signature Menu</h2>
+        <div class="menu-grid">
+            <div class="dish">
+                <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800" alt="Fresh Salad">
+                <div class="info"><h3>Garden Harvest Salad</h3><p>Local greens, toasted nuts, balsamic reduction.</p><p class="price">$14.00</p></div>
+            </div>
+            <div class="dish">
+                <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800" alt="Steak">
+                <div class="info"><h3>Signature Ribeye</h3><p>Aged beef, herb butter, roasted garlic.</p><p class="price">$32.00</p></div>
+            </div>
+            <div class="dish">
+                <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800" alt="Sushi">
+                <div class="info"><h3>Chef's Omakase</h3><p>Daily selection of the freshest catch.</p><p class="price">$45.00</p></div>
+            </div>
+            <div class="dish">
+                <img src="https://images.unsplash.com/photo-1580915411954-282cb1b0d780?q=80&w=800" alt="Pasta">
+                <div class="info"><h3>Truffle Pasta</h3><p>Hand-made tagliatelle with shaved truffles.</p><p class="price">$28.00</p></div>
+            </div>
         </div>
-        <div class="dish">
-            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800" alt="Steak">
-            <div class="info"><h3>Signature Ribeye</h3><p class="price">$32.00</p></div>
-        </div>
-        <div class="dish">
-            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800" alt="Sushi">
-            <div class="info"><h3>Artisan Sushi Set</h3><p class="price">$28.00</p></div>
-        </div>
-    </div>
+    </section>
+
+    <footer>
+        <h2>Visit Us</h2>
+        <p>123 Culinary Ave, Food City</p>
+        <p>Open Daily: 11:00 AM - 10:00 PM</p>
+        <p>📞 (555) 123-4567</p>
+    </footer>
 
 </body>
 </html>
