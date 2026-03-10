@@ -3,72 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Stunning Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <title>Gourmet Bites | Fine Dining</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
     <style>
-        :root { --bg: #0f172a; --card: rgba(30, 41, 59, 0.7); --text: #f8fafc; --accent: #38bdf8; }
-        
-        body { 
-            font-family: 'Inter', sans-serif; 
-            margin: 0; background: var(--bg); color: var(--text); 
-            line-height: 1.6; 
-        }
+        :root { --gold: #c5a059; --dark: #1a1a1a; --light: #f4f4f4; }
+        body { font-family: 'Poppins', sans-serif; margin: 0; background: var(--dark); color: white; }
 
-        /* Hero Section with Glass Overlay */
+        /* Hero */
         .hero { 
-            height: 100vh; 
-            background: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072') center/cover;
+            height: 80vh; 
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2000');
+            background-size: cover; background-position: center;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
-            text-align: center; padding: 20px;
+            text-align: center;
         }
+        h1 { font-family: 'Playfair Display', serif; font-size: 4rem; margin: 0; color: var(--gold); }
 
-        .glass-panel {
-            background: var(--card);
-            backdrop-filter: blur(15px);
-            padding: 3rem;
-            border-radius: 2rem;
-            border: 1px solid rgba(255,255,255,0.1);
-            max-width: 600px;
-        }
-
-        h1 { font-size: 3rem; margin: 0 0 1rem; letter-spacing: -2px; }
-        .accent { color: var(--accent); }
-
-        /* Project Cards */
-        .showcase { padding: 5rem 2rem; max-width: 1100px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem; }
-        
-        .card { 
-            background: #1e293b; border-radius: 1.5rem; overflow: hidden;
-            transition: 0.4s ease; border: 1px solid #334155;
-        }
-        .card:hover { transform: translateY(-15px); border-color: var(--accent); box-shadow: 0 20px 40px rgba(56, 189, 248, 0.2); }
-        .card img { width: 100%; height: 220px; object-fit: cover; }
-        .card-content { padding: 1.5rem; }
+        /* Menu Grid */
+        .menu { padding: 4rem 2rem; max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; }
+        .dish { background: #252525; border-radius: 15px; overflow: hidden; transition: 0.3s; }
+        .dish:hover { transform: scale(1.03); }
+        .dish img { width: 100%; height: 250px; object-fit: cover; }
+        .info { padding: 1.5rem; }
+        .price { color: var(--gold); font-weight: bold; font-size: 1.2rem; }
     </style>
 </head>
 <body>
 
     <div class="hero">
-        <div class="glass-panel">
-            <h1>Elevate your <span class="accent">Digital Presence</span></h1>
-            <p>Automated, lightning-fast, and visually stunning. This is how modern web development should feel.</p>
-        </div>
+        <h1>Gourmet Bites</h1>
+        <p>Experience the art of fine dining.</p>
     </div>
 
-    <section class="showcase">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1000" alt="Tech">
-            <div class="card-content"><h3>Future Tech</h3><p>Innovation at the edge of possibility.</p></div>
+    <div class="menu">
+        <div class="dish">
+            <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=800" alt="Salad">
+            <div class="info"><h3>Garden Fresh Salad</h3><p class="price">$14.00</p></div>
         </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=1000" alt="Code">
-            <div class="card-content"><h3>Clean Code</h3><p>Architecture that scales effortlessly.</p></div>
+        <div class="dish">
+            <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?q=80&w=800" alt="Steak">
+            <div class="info"><h3>Signature Ribeye</h3><p class="price">$32.00</p></div>
         </div>
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1614728853634-11910a3014a5?q=80&w=1000" alt="Design">
-            <div class="card-content"><h3>Design Systems</h3><p>Beautiful interfaces made simple.</p></div>
+        <div class="dish">
+            <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?q=80&w=800" alt="Sushi">
+            <div class="info"><h3>Artisan Sushi Set</h3><p class="price">$28.00</p></div>
         </div>
-    </section>
+    </div>
 
 </body>
 </html>
