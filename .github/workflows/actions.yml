@@ -1,5 +1,9 @@
-name: first-github-action
-on: [push]
+name: My First Action file!
+on:
+  push:
+    paths:
+      - 'index.html'
+  workflow_dispatch: 
 jobs:
   write-to-console:
     runs-on: ubuntu-latest
