@@ -48,6 +48,39 @@ To allow public access to the static website files stored in the S3 bucket, add 
 
 > **Note:** Make sure your S3 bucket's **Block Public Access** settings allow public access before applying this policy. For production deployments, consider using **CloudFront with Origin Access Control (OAC)** instead of making the S3 bucket publicly accessible.
 
+## 🖥️ EC2 Apache Web Server Setup
+
+To install and configure the Apache HTTP Server (`httpd`) on an Amazon Linux 2 EC2 instance, run the following commands:
+
+```bash
+#!/bin/bash
+
+# Update installed packages
+yum update -y
+
+# Install Apache HTTP Server
+yum install -y httpd
+
+# Start Apache HTTP Server
+systemctl start httpd
+
+# Enable Apache HTTP Server to start automatically after reboot
+systemctl enable httpd
+
+# Create a test HTML page
+echo "<h1>Hello NSU! $(hostname -f)</h1>" > /var/www/html/index.html
+```
+
+This script will:
+
+1. Update the installed packages on the EC2 instance.
+2. Install the Apache HTTP Server (`httpd`).
+3. Start the Apache web server.
+4. Configure Apache to start automatically when the instance reboots.
+5. Create a simple HTML page displaying **Hello NSU!** along with the instance's fully qualified hostname.
+
+> **Note:** Ensure that the EC2 instance's **Security Group** allows inbound HTTP traffic on **port 80** so the web server can be accessed from a browser.
+
 ## 📂 Project Structure
 
 ```text
